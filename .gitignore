@@ -1,0 +1,5 @@
+DelphesIO/
+!DelphesIO/CMakeLists.txt
+!DelphesIO/classes_def.xml
+!DelphesIO/getSources.sh
+!DelphesIO/sources.patch

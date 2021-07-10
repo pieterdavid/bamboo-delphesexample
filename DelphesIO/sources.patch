@@ -1,0 +1,84 @@
+diff -ru orig/include/DelphesClasses.h mod/include/DelphesClasses.h
+--- orig/include/DelphesClasses.h	2021-07-10 09:47:16.000000001 +0200
++++ mod/include/DelphesClasses.h	2021-07-10 09:47:37.000000001 +0200
+@@ -36,7 +36,7 @@
+ #include "TRef.h"
+ #include "TRefArray.h"
+ 
+-#include "classes/SortableObject.h"
++#include "SortableObject.h"
+ 
+ class DelphesFactory;
+ 
+diff -ru orig/src/ClassesLinkDef.h mod/src/ClassesLinkDef.h
+--- orig/src/ClassesLinkDef.h	2021-07-10 09:47:18.000000001 +0200
++++ mod/src/ClassesLinkDef.h	2021-07-10 09:47:39.000000001 +0200
+@@ -25,11 +25,10 @@
+  *
+  */
+ 
+-#include "classes/DelphesModule.h"
+-#include "classes/DelphesFactory.h"
+ 
+-#include "classes/SortableObject.h"
+-#include "classes/DelphesClasses.h"
++#include "DelphesFactory.h"
++#include "SortableObject.h"
++#include "DelphesClasses.h"
+ 
+ #ifdef __CINT__
+ 
+@@ -37,7 +36,6 @@
+ #pragma link off all classes;
+ #pragma link off all functions;
+ 
+-#pragma link C++ class DelphesModule+;
+ #pragma link C++ class DelphesFactory+;
+ 
+ #pragma link C++ class SortableObject+;
+diff -ru orig/src/DelphesClasses.cc mod/src/DelphesClasses.cc
+--- orig/src/DelphesClasses.cc	2021-07-10 09:47:17.000000001 +0200
++++ mod/src/DelphesClasses.cc	2021-07-10 09:47:39.000000001 +0200
+@@ -26,10 +26,10 @@
+  *
+  */
+ 
+-#include "classes/DelphesClasses.h"
++#include "DelphesClasses.h"
+ 
+-#include "classes/DelphesFactory.h"
+-#include "classes/SortableObject.h"
++#include "DelphesFactory.h"
++#include "SortableObject.h"
+ 
+ CompBase *GenParticle::fgCompare = 0;
+ CompBase *Photon::fgCompare = CompPT<Photon>::Instance();
+diff -ru orig/src/DelphesFactory.cc mod/src/DelphesFactory.cc
+--- orig/src/DelphesFactory.cc	2021-07-10 09:47:17.000000001 +0200
++++ mod/src/DelphesFactory.cc	2021-07-10 09:47:39.000000001 +0200
+@@ -25,10 +25,10 @@
+  *
+  */
+ 
+-#include "classes/DelphesFactory.h"
+-#include "classes/DelphesClasses.h"
++#include "DelphesFactory.h"
++#include "DelphesClasses.h"
+ 
+-#include "ExRootAnalysis/ExRootTreeBranch.h"
++#include "ExRootTreeBranch.h"
+ 
+ #include "TClass.h"
+ #include "TObjArray.h"
+diff -ru orig/src/ExRootTreeBranch.cc mod/src/ExRootTreeBranch.cc
+--- orig/src/ExRootTreeBranch.cc	2021-07-10 09:47:18.000000001 +0200
++++ mod/src/ExRootTreeBranch.cc	2021-07-10 09:47:39.000000001 +0200
+@@ -8,7 +8,7 @@
+  *
+  */
+ 
+-#include "ExRootAnalysis/ExRootTreeBranch.h"
++#include "ExRootTreeBranch.h"
+ 
+ #include "TClonesArray.h"
+ #include "TFile.h"

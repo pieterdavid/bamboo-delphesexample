@@ -1,0 +1,23 @@
+<lcgdict>
+  <class name="SortableObject"/>
+  <class name="Event"/>
+  <class name="LHCOEvent"/>
+  <class name="LHEFEvent"/>
+  <class name="LHEFWeight"/>
+  <class name="HepMCEvent"/>
+  <class name="GenParticle"/>
+  <class name="Vertex"/>
+  <class name="MissingET"/>
+  <class name="ScalarHT"/>
+  <class name="Rho"/>
+  <class name="Weight"/>
+  <class name="Photon"/>
+  <class name="Electron"/>
+  <class name="Muon"/>
+  <class name="Jet"/>
+  <class name="Track"/>
+  <class name="Tower"/>
+  <class name="HectorHit"/>
+  <class name="Candidate"/>
+</lcgdict>
+
