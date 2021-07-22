@@ -3,3 +3,4 @@ DelphesIO/
 !DelphesIO/classes_def.xml
 !DelphesIO/getSources.sh
 !DelphesIO/sources.patch
+__pycache__/

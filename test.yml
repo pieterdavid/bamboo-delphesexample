@@ -1,0 +1,24 @@
+tree: Delphes
+eras:
+  HL-LHC:
+    luminosity: 3000000 # 1/pb
+samples:
+  test:
+    era: HL-LHC
+    type: data
+    files:
+      - /afs/cern.ch/user/a/atalierc/public/snowmass/delphes_lhe_file_47_14TeV.lhe.root
+
+plotIt:
+  configuration:
+    width: 700
+    height: 600
+    luminosity-label: '%1$.2f fb^{-1} (13 TeV)'
+    experiment: CMS
+    extra-label: HL-LHC
+    luminosity-error: 0.025
+    show-overflow: true
+  plotdefaults:
+    log-y: True
+  legend:
+    position: [0.7, 0.8, 0.91, 0.91]
